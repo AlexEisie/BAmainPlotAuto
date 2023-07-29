@@ -8,7 +8,7 @@ sleep(1e3);
 
 var img = captureScreen();
 let res = paddle.ocr(img);
-var i=0;
+
 toastLog("截图可用");
 sleep(1e3);
 // var textList = ['入場', 'MENU', 'TOUCH', '出擊','AUTO','確認'];
@@ -17,7 +17,7 @@ var textList = ['Enter', 'Menu', 'TOUCH', 'Mobilize','AUTO','Confirm'];
 var textSList = ['Enter', 'Menu', 'TOUCH', 'MOBILIZE','AUTO','CONFIRM'];
 var status=-1;
 var loc=-1;
-for(var times=1;times<=20;times++)
+while(!cleared(res))
 {
     img = captureScreen();
     res = paddle.ocr(img);
@@ -109,4 +109,15 @@ function hasNew(res)
     //     return 0;
     // }
     return 1;
+}
+
+function cleared(res)
+{
+    var l=0;
+    while(res[l])
+    {
+        if(res[l].text.indexOf("cleared")!=-1) return 1;
+        else  l++;
+    }
+    return 0;
 }
