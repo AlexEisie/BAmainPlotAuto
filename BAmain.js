@@ -13,8 +13,8 @@ toastLog("截图可用");
 sleep(1e3);
 // var textList = ['入場', 'MENU', 'TOUCH', '出擊','AUTO','確認'];
 // var textSList = ['入场', 'MENU', 'TOUCH', '出击','AUTO','雅部'];
-var textList = ['Enter', 'Menu', 'TOUCH', 'Mobilize','AUTO','Confirm'];
-var textSList = ['Enter', 'Menu', 'TOUCH', 'MOBILIZE','AUTO','CONFIRM'];
+var textList = ['Enter', 'Menu', 'Pyroxenes', 'Mobilize','AUTO','Confirm'];
+var textSList = ['Enter', 'Menu', 'Pyroxenes', 'MOBILIZE','AUTO','CONFIRM'];
 var status=-1;
 var loc=-1;
 while(!cleared(res))
